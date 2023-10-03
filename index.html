@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Mood</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Font awsm -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+
+    <div id="leftBurger"></div>
+
+    <!-- NavBar -->
+    <nav id="navBar">
+        <div onclick="burgerMenu()" class="burger" id="burger">
+            <i class="fa-solid fa-bars fa-2xl" style="color: #000000;"></i>
+        </div>
+        <img id="logo" class="logo" src="./Images/LogoCookpal 1.png" alt="logo">
+        <div class="tags">
+            <p><a href="#">Home</a></p>
+            <p><a href="#">Explore</a></p>
+            <p><a href="#">Help</a></p>
+            <img class="user" src="./Images/UserEllipse 2.png" alt="user">
+        </div>
+    </nav>
+
+    <!-- heroPage -->
+    <section class="heroPage">
+        <!-- <img src="./Images/HeroPage.png" alt="hero"> -->
+        <p class="Trending">Trending now</p>
+        <h1>Mike’s famous salad with cheese</h1>
+        <p class="author">By John Mike</p>
+    </section>
+
+
+    <!-- SearchBar -->
+    <h4>Search For Recipes</h4>
+    <section class="searchBar">
+        <div class="searchTag">
+            <i class="fa-solid fa-magnifying-glass" style="color: #9fa0a3;"></i>
+            <input type="text" id="searchInput" placeholder="Search for recipes...">
+        </div>
+
+        <button id="search"><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i></button>
+    </section>
+
+    <!-- Sorting Section -->
+    <div class="sortingButtons">
+        <button style="background-color: #EAAA00;" class="btns" onclick="showAllFood()">All Recipes <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></button>
+        <button style="background-color: #C4D600;" class="btns" onclick="showVegOnly()">Veg Recipes Only <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></button>
+        <button style="background-color: #DC582A;" class="btns" onclick="showNonVegOnly()">Non Veg Recipes <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></button>
+    </div>
+
+    <!-- Food items -->
+
+    <main>
+        <div class="left">
+            <h2>Rating</h2>
+            
+                <label for="above">
+                    <input onclick="sortAbove4()" type="radio" value="4.5 and Above" name="aboveBelow" id="above4">
+                    4.5 and Above
+                </label>
+            
+                <label for="below">
+                    <input onclick="sortBelow4()" type="radio" value="Below 4" name="aboveBelow" id="below4">
+                    Below 4
+                </label>
+            
+        </div>
+
+        <div class="right" id="allCards">
+         
+            <div class="imgDiv">
+                <img src="https://source.unsplash.com/random?veggies" alt="image" />
+            </div>
+            <div class="VegNon">
+                <p class="vegNonveg">Veg</p>
+            </div>
+            <div class="title">
+              <h5>Salad</h5>
+              <p >
+                <svg
+                class="star"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                >
+                  <path
+                    d="M10.7902 8.54673C10.6175 8.71407 10.5382 8.95607 10.5775 9.1934L11.1702 12.4734C11.2202 12.7514 11.1029 13.0327 10.8702 13.1934C10.6422 13.3601 10.3389 13.3801 10.0902 13.2467L7.13753 11.7067C7.03486 11.6521 6.92086 11.6227 6.8042 11.6194H6.62353C6.56086 11.6287 6.49953 11.6487 6.44353 11.6794L3.4902 13.2267C3.3442 13.3001 3.17886 13.3261 3.01686 13.3001C2.6222 13.2254 2.35886 12.8494 2.42353 12.4527L3.01686 9.17273C3.0562 8.9334 2.97686 8.69007 2.8042 8.52007L0.396863 6.18673C0.19553 5.9914 0.12553 5.69807 0.21753 5.4334C0.306863 5.1694 0.534863 4.97673 0.810196 4.9334L4.12353 4.45273C4.37553 4.42673 4.59686 4.2734 4.7102 4.04673L6.1702 1.0534C6.20486 0.986733 6.24953 0.9254 6.30353 0.8734L6.36353 0.826733C6.39486 0.792067 6.43086 0.7634 6.47086 0.740067L6.54353 0.7134L6.65686 0.666733H6.93753C7.1882 0.692733 7.40886 0.842733 7.5242 1.06673L9.00353 4.04673C9.1102 4.26473 9.31753 4.41607 9.55686 4.45273L12.8702 4.9334C13.1502 4.9734 13.3842 5.16673 13.4769 5.4334C13.5642 5.70073 13.4889 5.99407 13.2835 6.18673L10.7902 8.54673Z"
+                    fill="#FDC040"
+                  />
+                </svg>
+                4.5
+              </p>
+            </div>
+    
+            <div class="TimenLogo">
+              <p>40 min</p>
+    
+              <div class="heartAndComment">
+                  <div class="like">
+                    <i class="fa-solid fa-heart" id="heart"></i>
+                  </div>
+        
+                  <div class="comment">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                    >
+                      <g clip-path="url(#clip0_1770_229)">
+                        <path
+                          d="M18.9347 15.5907C20.0485 13.6639 20.4228 11.3976 19.9877 9.21499C19.5526 7.03241 18.3377 5.08289 16.5701 3.73063C14.8025 2.37837 12.6031 1.71587 10.3827 1.86689C8.16225 2.01791 6.07277 2.97212 4.50454 4.55126C2.93632 6.13041 1.99663 8.22646 1.86103 10.4479C1.72542 12.6693 2.40317 14.8641 3.76766 16.6222C5.13215 18.3804 7.09006 19.5817 9.27561 20.0017C11.4612 20.4217 13.7249 20.0316 15.6438 18.9044L20.1667 20.1667L18.9347 15.5907Z"
+                          stroke="#252525"
+                          stroke-width="2"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1770_229">
+                          <rect width="22" height="22" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="text">
+            <div class="div1">
+                <img src="./Images/LogoCookpal 1.png" alt="">
+                <p>Cookpal is a recipe website with a wide variety of delicious recipes, easy-to-use search function. Join our community and let's cook together!</p>
+            </div>
+
+            <div class="div2">
+                <h3 class="footerTitle">Company</h3>
+                <p>Home</p>
+                <p>Explore</p>
+                <p>Team</p>
+                <p>About us</p>
+                <p>Activity</p>
+            </div>
+
+            <div class="div3">
+                <h3 class="footerTitle">Resources</h3>
+                <p>Blog</p>
+                <p>Use Cases</p>
+                <p>Testimonials</p>
+                <p>Insights</p>
+            </div>
+
+            <div class="div4">
+                <img src="./Images/LogoCookpal 1.png" alt="">
+                <p>Ut risus mattis interdum faucibus facilisi. Facilisi purus accumsan aliquam.</p>
+
+                <div class="email">
+                    <div class="footersearch">
+                        <input placeholder="Your Email" type="text">
+                        <i class="fa-solid fa-at" style="color: #292929;"></i>
+                    </div>
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="social">
+            <div class="s1"><i class="fa-brands fa-instagram" style="color: #fafafa;"></i></div>
+            <div class="s1"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></div>
+            <div class="s1"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></div>
+            <div class="s1"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

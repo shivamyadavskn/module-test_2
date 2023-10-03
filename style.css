@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    padding: 15px 40px;
+}
+
+/* NavBar */
+
+.burger{
+    display: none;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 10000;
+    top: 0;
+    background-color: white;
+    padding: 10px 0px;
+}
+
+.user{
+    margin-left: 50px;
+}
+
+.tags{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--Black, #253D4E);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+a:hover{
+    color: #509E2F;
+}
+
+/* heroPage */
+
+.heroPage{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: url(./Images/HeroPage.png);
+    width: 1264px;
+    height: 355px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heroPage h1{
+    width: 446px;   
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 127%; /* 50.8px */
+    margin-left: 70px;
+}
+
+.Trending{
+    color: #DC582A;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 127%; /* 30.48px */
+    margin-left: 70px;
+}
+
+.author{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 127%; /* 25.4px */
+    margin-left: 70px;
+}
+
+/* SearchBar */
+
+h4{
+    margin: 20px 0px;
+    color: #252525;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.searchBar{
+    display: flex;
+    margin: 30px 0px;
+}
+
+.searchTag{
+    background: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 2px 0px 0px 2px;
+    flex: 4;
+    padding: 10px 20px;
+}
+
+#searchInput{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    flex: 2;
+    font-size: 14px;
+}
+
+#search{
+    border: none;
+    display: flex;
+    width: 55px;
+    height: 42px;
+    padding: 21px;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    border-radius: 0px 2px 2px 0px;
+    background: #509E2F;
+}
+
+/* Sorting */
+
+.sortingButtons button{
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    color: white;
+}
+
+.sortingButtons{
+    display: flex;
+    gap: 20px;
+    margin: 30px 0px;
+}
+
+.btns{
+    display: flex;
+    gap: 20px;
+    width: 236.8px;
+    height: 86px;
+    padding: 30px 29.8px 30px 29px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Bottom */
+main{
+    display: flex;
+}
+
+.left{
+    width: 900px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* border: 2px solid red; */
+}
+
+.left label{
+    cursor: pointer;
+}
+
+.right{
+    /* border: 2px solid black; */
+    width: 4000px;
+}
+
+/* Cards */
+#heart{
+    /* color: red; */
+}
+
+#allCards{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card img{
+    display: flex;
+    width: 289px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+}
+
+.card{
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* justify-content: center;
+    align-items: center; */
+    padding: 8px;
+    width: 305px;
+    height: 315px;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 3px 8px -1px rgba(50, 50, 71, 0.05), 0px 0px 1px 0px rgba(12, 26, 75, 0.24);
+    transition: all 0.5s ease;
+}
+
+.card:hover{
+    scale: 1.1;
+}
+
+.imgDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vegNonveg{
+    /* border: 1px solid black; */
+    padding: 0px 15px;
+    color: #A1A1A1;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px; /* 240% */
+}
+
+.title{
+    /* border: 1px solid black; */
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.star{
+    margin-right: 6px;
+}
+
+.title h5{
+    color: #252525;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px; /* 120% */
+}
+
+.TimenLogo{
+    /* border: 1px solid black; */
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TimenLogo p{
+    color: #DC582A;
+    /* Headings/h3 */
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 136.523%; /* 27.305px */
+}
+
+.heartAndComment{
+    display: flex;
+    gap: 10px;
+}
+
+/* Footer */
+footer{
+    margin: 25px 10px;
+}
+
+.text{
+    display: flex;
+    justify-content: space-between;
+    gap: 115px;
+}
+
+.div1 p{
+    color: #253D4E;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 400;
+    width: 290px;
+}
+
+.footerTitle{
+    color: #253D4E;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px; /* 130% */
+}
+
+
+
+.div2,.div3{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.div2 p, .div3 p{
+    color: var(--black-alpha-60, rgba(0, 0, 0, 0.60));
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+}
+
+.div4 p{
+    width: 400px;
+    height: 40px;
+    align-self: stretch;
+    color: var(--black-alpha-60, rgba(0, 0, 0, 0.60));
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.28px;
+}
+
+.email{
+    padding: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.footersearch{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 7px;
+}
+
+.email input{
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    outline: none;
+}
+
+.email button{
+    width: 101px;
+    height: 44px;
+    padding: 12px;
+    background-color: #509E2F;
+    border: none;
+    border-radius: 7px;
+
+    color: var(--purple-05, #FCFAFF);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+    
+    /* Archivo/Body/Button */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+    letter-spacing: 0.32px;
+}
+
+.social{
+    margin-top: 25px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.s1{
+    border-radius: 50%;
+    background-color: #253D4E;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.like-button {
+    background-color: #cac9c9;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.liked {
+    color: red;
+}
+
+.heartBtn{
+    position: relative;
+    top: -35px;
+    border-radius: 10px;
+    width: 50px;
+    left: 210px;
+}
+
+
+/* Media Query */
+
+/* Mobile-View @ 669px */
+
+@media screen and (max-width: 680px){
+    .tags{
+        display: none;
+    }
+
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+
+    nav{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 25px;
+        min-width: 100vw;
+    }
+
+    .heroPage{
+        /* scale: 0.5 0.9;
+        position: relative;
+        left: -350px; */
+        width: 580px;
+        height: 355px;
+        border-radius: 30px;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Cards */
+    .right{
+        /* border: 2px solid black; */
+        width: 500px;
+    }
+    
+    /* Cards */
+    
+    #allCards{
+        /* border: 2px solid black; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+    
+    .card img{
+        display: flex;
+        width: 150px;
+        height: 150px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+    }
+    
+    .card{
+        overflow: hidden;
+        display: flex;
+        
+        flex-direction: column;
+        gap: 5px;
+        /* justify-content: center;
+        align-items: center; */
+        padding: 8px;
+        width: 180px;
+        height: 315px;
+        border-radius: 16px;
+        background: #FFF;
+        box-shadow: 0px 3px 8px -1px rgba(50, 50, 71, 0.05), 0px 0px 1px 0px rgba(12, 26, 75, 0.24);
+    }
+
+    .heartBtn{
+        /* border: 2px solid red; */
+        position: relative;
+        top: -35px;
+        border-radius: 10px;
+        width: 50px;
+        left: 90px;
+    }
+    
+    .text{
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .whiteDiv{
+        /* border: 2px solid red; */
+        background-color: white;
+        z-index: 1000;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+    }
+    .leftBurger{
+        margin: 20px 0px;
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+}
